@@ -1,1 +1,5 @@
-\point_e\examples\point_e_model_cache
+*.egg-info/
+__pycache__/
+point_e_model_cache/
+.ipynb_checkpoints/
+.DS_Store
