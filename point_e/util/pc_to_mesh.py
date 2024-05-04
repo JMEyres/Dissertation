@@ -2,6 +2,7 @@ from typing import Dict
 
 import numpy as np
 import skimage
+import skimage.measure
 import torch
 from tqdm.auto import tqdm
 
