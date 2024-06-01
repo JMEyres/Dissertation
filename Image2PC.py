@@ -37,8 +37,8 @@ sampler = PointCloudSampler(
 )
 
 # Load an image to condition on.
-prompt = "HouseDrawing"
-img = Image.open("Images/" + prompt + ".png")
+prompt = "Turret2"
+img = Image.open("Images/" + prompt + ".jpg")
 
 # Produce a sample from the model.
 samples = None

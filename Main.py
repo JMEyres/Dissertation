@@ -15,7 +15,7 @@ print('creating base model...') # think this is the glide - synthetic view step
 base_name = 'base40M-textvec'
 base_model = model_from_config(MODEL_CONFIGS[base_name], device)
 base_model.eval()
-base_diffusion = diffusion_from_config(DIFFUSION_CONFIGS[basell_name])
+base_diffusion = diffusion_from_config(DIFFUSION_CONFIGS[base_name])
 
 print('creating upsample model...')
 upsampler_model = model_from_config(MODEL_CONFIGS['upsample'], device)
@@ -39,7 +39,7 @@ sampler = PointCloudSampler(
 )
 
 # Set a prompt to condition on.
-prompt = 'a house'
+prompt = 'a jewel'
 
 # Produce a sample from the model.
 samples = None
