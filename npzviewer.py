@@ -11,9 +11,8 @@ from point_e.models.configs import MODEL_CONFIGS, model_from_config
 from point_e.util.plotting import plot_point_cloud
 from point_e.util.point_cloud import PointCloud
 
-pc = PointCloud.load("Pointclouds/a jewel")
-pc.coords[0] = (-1,-1,-1)
-print(pc.coords[0])
+pc = PointCloud.load("Pointclouds/Turret1")
+print(pc.channels)
 fig = plot_point_cloud(pc, grid_size=1, fixed_bounds=((-1, -1, -1), (1, 1, 1)))
 
 plt.show()
