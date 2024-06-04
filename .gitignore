@@ -1,0 +1,11 @@
+*.egg-info/
+__pycache__/
+point_e_model_cache/
+.ipynb_checkpoints/
+.DS_Store
+Point-E Game/.idea/
+Point-E Game/Library/
+Point-E Game/Logs/
+Point-E Game/obj/
+Point-E Game/Temp/
+Point-E Game/UserSettings/
