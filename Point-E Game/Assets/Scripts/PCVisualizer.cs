@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using UnityEditor;
 
 public class PCVisualizer : MonoBehaviour
 {
-    private string path = "./Assets/PCFiles/Turret1.txt";
+    
+    [SerializeField]private TextAsset pointCloud;
     private ParticleSystem.Particle[] cloud;
     private List<Vector3> coords;
     private bool pointsUpdated = false;
@@ -14,7 +16,7 @@ public class PCVisualizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        coords = CreateCoordsList(path);
+        coords = CreateCoordsList(AssetDatabase.GetAssetPath(pointCloud));
         SetPoints(coords);
     }
 
