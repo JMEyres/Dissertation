@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\PCVisualizer.cs" />
+     <Compile Include="Assets\Scripts\AISpawner.cs" />
      <Compile Include="Assets\Scripts\BuildingPlaceable.cs" />
      <Compile Include="Assets\Scripts\Grid.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
