@@ -11,7 +11,7 @@ from point_e.models.configs import MODEL_CONFIGS, model_from_config
 from point_e.util.plotting import plot_point_cloud
 from point_e.util.point_cloud import PointCloud
 
-pc = PointCloud.load("Pointclouds/a tech inspired building")
+pc = PointCloud.load("Pointclouds/a robot")
 print(pc.channels)
 fig = plot_point_cloud(pc, grid_size=3, fixed_bounds=((-1, -1, -1), (1, 1, 1)))
 
