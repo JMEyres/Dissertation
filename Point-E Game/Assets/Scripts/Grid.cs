@@ -22,9 +22,10 @@ public class Grid : MonoBehaviour
     [Header("Placeables")] 
     [SerializeField] private string selectedBuilding;
     
-    [SerializeField] BuildingPlaceable placeableObject;
-    GameObject placeableObjectModel;
-    GameObject placeableObjectBBox;
+    private BuildingPlaceable placeableObject;
+    private GameObject placeableObjectModel;
+    private GameObject placeableObjectPointCloud;
+    private GameObject placeableObjectBBox;
     float placeableObjectRotation = 0;
     
     private bool buildingSelected; 
@@ -54,13 +55,13 @@ public class Grid : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdatePreview();
+        if (placeableObject != null) 
+            UpdatePreview();
     }
 
     void SetSelectedBuilding(string buildingName)
     {
         selectedBuilding = buildingName;
-        Destroy(placeableObject);
     }
 
     void ShowBuildingPreview()
@@ -68,12 +69,12 @@ public class Grid : MonoBehaviour
         if (placeableObject != null)
         {
             placeableObject.gameObject.SetActive(true);
-            //placeableObjectModel.SetActive(placeableObject.IsPlaceable);
-            //placeableObjectModel.transform.localRotation = Quaternion.Euler(0, placeableObjectRotation, 0);
+            placeableObject.mesh.SetActive(false);
         }
         else
         {
-            placeableObject = BuildingManager.CreateBuilding(selectedBuilding);
+            if(selectedBuilding != "")
+                placeableObject = BuildingManager.CreateBuilding(selectedBuilding);
         }
     }
 
@@ -92,15 +93,15 @@ public class Grid : MonoBehaviour
 
     void PlaceBuilding()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && placeableObject != null && buildingSelected)
         {
-            Debug.Log("place");
             var building = BuildingManager.PlaceBuilding(selectedBuilding); // need to setup selected building stuff so doesnt just pass in ""
             building.transform.position = placeableObject.transform.position;
             building.transform.localRotation = placeableObject.transform.localRotation;
             
-            Destroy(placeableObject);
+            Destroy(placeableObject.gameObject);
             buildingSelected = false;
+            selectedBuilding = "";
         }
     }
 

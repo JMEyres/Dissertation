@@ -12,9 +12,8 @@ public class PCVisualizer : MonoBehaviour
     private ParticleSystem.Particle[] cloud;
     private List<Vector3> coords;
     private bool pointsUpdated = false;
-
-    // Start is called before the first frame update
-    void Start()
+    
+    void Awake()
     {
         coords = CreateCoordsList(AssetDatabase.GetAssetPath(pointCloud));
         SetPoints(coords);

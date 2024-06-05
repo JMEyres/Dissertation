@@ -25,7 +25,6 @@ public class BuildingManager : MonoBehaviour
     }
     public static BuildingPlaceable CreateBuilding(string buildingName)
     {
-        Debug.Log(buildingName);
         var building = Instantiate(instance.buildingPrefabs[buildingName]);
         building.transform.parent = instance.transform;
         return building;
@@ -36,7 +35,9 @@ public class BuildingManager : MonoBehaviour
         var building = CreateBuilding(buildingName);
         //var buildingStats;
         building.enabled = false;
-        building.gameObject.SetActive(true);
+        //building.gameObject.SetActive(true);
+        building.mesh.SetActive(true);
+        building.pointCloud.SetActive(false);
         return building;
     }
 }

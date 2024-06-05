@@ -5,6 +5,8 @@ using UnityEngine;
 public class BuildingPlaceable : MonoBehaviour
 {
     public bool IsPlaceable { get; private set; } = true;
+    public GameObject pointCloud;
+    public GameObject mesh;
 
     void OnTriggerStay(Collider other)
     {
