@@ -8,10 +8,10 @@ public class BuildingPlaceable : MonoBehaviour
     public GameObject pointCloud;
     public GameObject mesh;
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider _other)
     {
-        var length = (transform.position - other.transform.position).magnitude;
-        var size = Mathf.Max(transform.localScale.x, other.transform.localScale.x);
+        var length = (transform.position - _other.transform.position).magnitude;
+        var size = Mathf.Max(transform.localScale.x, _other.transform.localScale.x);
 
         if (length > size * 0.9f) return;
         IsPlaceable = !(length <= size * 0.9f);

@@ -23,16 +23,16 @@ public class BuildingManager : MonoBehaviour
         }
         buildingList.Clear();
     }
-    public static BuildingPlaceable CreateBuilding(string buildingName)
+    public static BuildingPlaceable CreateBuilding(string _buildingName)
     {
-        var building = Instantiate(instance.buildingPrefabs[buildingName]);
+        var building = Instantiate(instance.buildingPrefabs[_buildingName]);
         building.transform.parent = instance.transform;
         return building;
     }
 
-    public static BuildingPlaceable PlaceBuilding(string buildingName)
+    public static BuildingPlaceable PlaceBuilding(string _buildingName)
     {
-        var building = CreateBuilding(buildingName);
+        var building = CreateBuilding(_buildingName);
         //var buildingStats;
         building.enabled = false;
         //building.gameObject.SetActive(true);

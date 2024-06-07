@@ -29,22 +29,22 @@ public class PCVisualizer : MonoBehaviour
         }
     }
 
-    public void SetPoints(List<Vector3> coords)
+    public void SetPoints(List<Vector3> _coords)
     {
-        cloud = new ParticleSystem.Particle [coords.Count];
-        for (int i = 0; i < coords.Count; i++)
+        cloud = new ParticleSystem.Particle [_coords.Count];
+        for (int i = 0; i < _coords.Count; i++)
         {
-            cloud[i].position = coords[i];
+            cloud[i].position = _coords[i];
             cloud[i].startSize = 0.01f;
         }
 
         pointsUpdated = true;
     }
 
-    List<Vector3> CreateCoordsList(string path)
+    List<Vector3> CreateCoordsList(string _path)
     {
         List<Vector3> coordsList = new List<Vector3>();
-        String[] itemStrings = File.ReadAllLines(path);
+        String[] itemStrings = File.ReadAllLines(_path);
         for (int i = 0; i < itemStrings.Length; i++)
         {
             String tempString;

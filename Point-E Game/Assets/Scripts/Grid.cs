@@ -59,9 +59,9 @@ public class Grid : MonoBehaviour
             UpdatePreview();
     }
 
-    void SetSelectedBuilding(string buildingName)
+    void SetSelectedBuilding(string _buildingName)
     {
-        selectedBuilding = buildingName;
+        selectedBuilding = _buildingName;
     }
 
     void ShowBuildingPreview()
@@ -105,9 +105,9 @@ public class Grid : MonoBehaviour
         }
     }
 
-    public static void SelectBuilding(string buildingName)
+    public static void SelectBuilding(string _buildingName)
     {
-        instance.SetSelectedBuilding(buildingName);
+        instance.SetSelectedBuilding(_buildingName);
         instance.buildingSelected = true;
     }
 }

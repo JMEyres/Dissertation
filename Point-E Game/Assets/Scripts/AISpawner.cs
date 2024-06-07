@@ -7,6 +7,8 @@ public class AISpawner : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float spawnInterval = 3.5f;
+    [SerializeField] private Vector2 spawnBoundsX;
+    [SerializeField] private Vector2 spawnBoundsZ;
     private float timer;
     
     void Start()
@@ -24,8 +26,12 @@ public class AISpawner : MonoBehaviour
         }
     }
 
-    private void spawnEnemy(GameObject enemy)
+    private void spawnEnemy(GameObject _enemy)
     {
-        GameObject newEnemy = Instantiate(enemy, gameObject.transform);
+        GameObject newEnemy = Instantiate(_enemy, gameObject.transform);
+        var tempPos = newEnemy.transform.position;
+        tempPos.x += UnityEngine.Random.Range(spawnBoundsX.x, spawnBoundsX.y);
+        tempPos.z += UnityEngine.Random.Range(spawnBoundsZ.x, spawnBoundsZ.y);
+        newEnemy.transform.position = tempPos;
     }
 }

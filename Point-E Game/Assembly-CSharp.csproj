@@ -45,10 +45,12 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Turret.cs" />
      <Compile Include="Assets\Scripts\PCVisualizer.cs" />
      <Compile Include="Assets\Scripts\AISpawner.cs" />
      <Compile Include="Assets\Scripts\BuildingPlaceable.cs" />
      <Compile Include="Assets\Scripts\Grid.cs" />
+     <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\BuildingManager.cs" />
      <Folder Include="Assets" />
@@ -131,6 +133,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
      <Folder Include="Assets\Materials" />
+     <None Include="Assets\PCFiles\Railgun2.txt" />
      <None Include="Assets\PCFiles\a castle tower.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
