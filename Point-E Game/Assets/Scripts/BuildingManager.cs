@@ -5,12 +5,13 @@ using UnityEngine;
 public class BuildingManager : MonoBehaviour
 {
     [Header("Building Prefabs")] 
-    [SerializeField] private List<BuildingPlaceable> buildingList = new List<BuildingPlaceable>();
+    [SerializeField] private List<BuildingPlaceable> buildingList;
 
     private Dictionary<string, BuildingPlaceable> buildingPrefabs;
 
     private static BuildingManager instance;
     private static BuildingPlaceable placeableInstance;
+    
     void Awake()
     {
         if (instance == null)
@@ -32,10 +33,10 @@ public class BuildingManager : MonoBehaviour
 
     public static BuildingPlaceable PlaceBuilding(string _buildingName)
     {
-        if (PlayerStats.money >= instance.buildingPrefabs[_buildingName].price)
+        if (PlayerStats.money >= instance.buildingPrefabs[_buildingName].buildingStats.price)
         {
             var building = CreateBuilding(_buildingName);
-            PlayerStats.money -= building.price;
+            PlayerStats.money -= building.buildingStats.price;
             //var buildingStats;
             building.enabled = false;
             foreach (var mesh in building.meshs)

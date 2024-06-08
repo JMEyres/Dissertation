@@ -39,7 +39,7 @@ sampler = PointCloudSampler(
 )
 
 # Set a prompt to condition on.
-prompt = 'big building'
+prompt = ('futuristic building')
 
 # Produce a sample from the model.
 samples = None

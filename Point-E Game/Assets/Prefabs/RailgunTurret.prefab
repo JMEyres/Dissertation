@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5950384567592784246}
   - component: {fileID: 4727173456671687667}
   - component: {fileID: 763980008926088835}
+  - component: {fileID: 7915323859563149904}
   - component: {fileID: 6331914347219913988}
   - component: {fileID: -3647833873041759119}
   m_Layer: 0
@@ -49,13 +50,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a45cca86da37b438c2c8cc0e8919f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
-  fireRate: 1
   enemyTag: Enemy
   pivot: {fileID: 6484661078237018060}
   rotationSpeed: 10
   bulletPrefab: {fileID: 6606403656024903767, guid: 00bad39ae377a1441a90b14ff8ff749a, type: 3}
   shootPoint: {fileID: 3723156318996062136}
+  buildingStats: {fileID: 7915323859563149904}
 --- !u!114 &763980008926088835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +74,22 @@ MonoBehaviour:
   meshs:
   - {fileID: 8323275546549240145}
   - {fileID: 3835572082244027292}
-  price: 100
+  buildingStats: {fileID: 7915323859563149904}
+--- !u!114 &7915323859563149904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224286696618107796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba073d9a0545024bb59d8e8ff5f5667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 10
+  fireRate: 1
+  range: 15
 --- !u!65 &6331914347219913988
 BoxCollider:
   m_ObjectHideFlags: 0

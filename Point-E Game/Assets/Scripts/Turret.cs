@@ -10,8 +10,6 @@ public class Turret : MonoBehaviour
     private Transform target;
     
     [Header("Attributes")]
-    public float range = 15f;
-    public float fireRate = 1f;
     private float fireCountdown = 0f;
     
     [Header("Required Fields")]
@@ -22,11 +20,17 @@ public class Turret : MonoBehaviour
     
     public GameObject bulletPrefab;
     public Transform shootPoint;
-   
+
+    public BuildingStats buildingStats;
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f); // repeat function 2 times a second
+    }
+
+    private void Awake()
+    {
+        if(buildingStats == null) buildingStats = GetComponent<BuildingStats>();
     }
 
     // Update is called once per frame
@@ -44,7 +48,7 @@ public class Turret : MonoBehaviour
        if (fireCountdown <= 0f)
        {
            Shoot();
-           fireCountdown = 1f / fireRate;
+           fireCountdown = 1f / buildingStats.fireRate;
        }
 
        fireCountdown -= Time.deltaTime;
@@ -66,7 +70,7 @@ public class Turret : MonoBehaviour
             }
         }
 
-        if (closestEnemy != null && closestDistance <= range)
+        if (closestEnemy != null && closestDistance <= buildingStats.range)
             target = closestEnemy.transform;
         else
             target = null;
@@ -82,6 +86,6 @@ public class Turret : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
+        Gizmos.DrawWireSphere(transform.position, buildingStats.range);
     }
 }

@@ -97,7 +97,7 @@ public class Grid : MonoBehaviour
 
     void PlaceBuilding()
     {
-        if (Input.GetMouseButtonDown(0) && placeableObject != null && buildingSelected && placeableObject.IsPlaceable)
+        if (Input.GetMouseButtonDown(1) && placeableObject != null && buildingSelected && placeableObject.IsPlaceable)
         {
             var building = BuildingManager.PlaceBuilding(selectedBuilding);
             if(building != null)

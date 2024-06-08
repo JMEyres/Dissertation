@@ -8,7 +8,13 @@ public class BuildingPlaceable : MonoBehaviour
     public bool IsPlaceable { get; private set; } = true;
     public List<GameObject> pointClouds;
     public List<GameObject> meshs;
-    public int price = 5;
+    [Header("Required")] 
+    public BuildingStats buildingStats;
+
+    private void Awake()
+    {
+        buildingStats = GetComponent<BuildingStats>();
+    }
 
     void OnTriggerStay(Collider _other)
     {
