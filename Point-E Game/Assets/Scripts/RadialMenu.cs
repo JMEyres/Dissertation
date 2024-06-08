@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,8 +16,16 @@ public class RadialMenu : MonoBehaviour
     [SerializeField] private float backgroundRadius;
 
     [Header("Segments")] 
-    [SerializeField] private int numOfSegments;
+    [SerializeField] private GameObject segment;
+
+    [Header("Text")] 
+    [SerializeField] private GameObject textPrefab;
     
+    [Header("Required")]
+    [SerializeField] private List<string> buildables;
+    [SerializeField] private Color normalColor;
+    [SerializeField] private Color highlightedColor;
+
     private GameObject radialMaskRef;
     private GameObject radialBGRef;
     private GameObject segmentRef;
@@ -27,17 +36,12 @@ public class RadialMenu : MonoBehaviour
     private List<GameObject> radialLines = new List<GameObject>();
 
     private Vector2 mousePos;
-
-    public List<string> buildables;
-    public Color normalColor;
-    public Color highlightedColor;
-
-    public GameObject segment;
+    
+    private int numOfSegments;
     private Image segmentImage;
     private int selectedSegment;
     
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         radialMaskRef = Instantiate(radialMask, transform);
         radialBGRef = Instantiate(radialBackground, transform);
@@ -47,10 +51,13 @@ public class RadialMenu : MonoBehaviour
         BGRect = radialBGRef.GetComponent<RectTransform>();
         segmentImage = segmentRef.GetComponent<Image>();
 
+        numOfSegments = buildables.Count;
+        
         maskRect.sizeDelta = new Vector2(maskRadius * 2, maskRadius * 2);
         BGRect.sizeDelta = new Vector2(backgroundRadius * 2, backgroundRadius * 2);
         segmentRef.GetComponent<RectTransform>().sizeDelta = new Vector2(backgroundRadius * 2, backgroundRadius * 2);
         segmentImage.fillAmount = 1.0f/numOfSegments;
+
 
         if(numOfSegments != 1)
         {
@@ -64,11 +71,16 @@ public class RadialMenu : MonoBehaviour
                 tempRect.localPosition = new Vector3(0, -(backgroundRadius / 2), 0);
                 
                 radialLines.Add(temp);
+
+                var tempText = Instantiate(textPrefab, transform);
+                tempText.GetComponent<TextMeshProUGUI>().text = buildables[i];
+                tempText.transform.localEulerAngles = new Vector3(0, 0, 120);
+                tempText.transform.Translate(new Vector3(0, backgroundRadius*0.75f, 0),Space.Self); 
+                tempText.transform.localEulerAngles = new Vector3(0, 0, 0);
             }
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         mousePos.x = Input.mousePosition.x - (Screen.width / 2);
@@ -108,7 +120,6 @@ public class RadialMenu : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Grid.SelectBuilding(buildables[selectedSegment]);
-                //Debug.Log(buildables[selectedSegment]);
                 gameObject.SetActive(false);
             }
         }

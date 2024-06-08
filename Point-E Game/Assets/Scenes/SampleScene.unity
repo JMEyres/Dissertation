@@ -697,12 +697,14 @@ MonoBehaviour:
   radialBackground: {fileID: 4516748146625936889, guid: 75b70dc69eb1a6e41a8a6c68409d59e7, type: 3}
   radialLine: {fileID: 8646246676366463331, guid: 59e231e401d165b40b8d490865547ade, type: 3}
   backgroundRadius: 500
-  numOfSegments: 5
+  segment: {fileID: 879917866615006243, guid: c69bc027f50fe314b843701f930efc0e, type: 3}
+  textPrefab: {fileID: 8770692648800111830, guid: 4ea5a02c01c709444b7bd0c70cd7d37b, type: 3}
   buildables:
   - RailgunTurret
+  - Test
+  - YOYOYOYO
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightedColor: {r: 0, g: 1, b: 0.9905586, a: 1}
-  segment: {fileID: 879917866615006243, guid: c69bc027f50fe314b843701f930efc0e, type: 3}
 --- !u!1 &732747312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,6 +1699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingList:
   - {fileID: 763980008926088835, guid: 18d95e8fe3ba3804db85818d8f2f82d3, type: 3}
+  - {fileID: 763980008926088835, guid: 33811ca360681684cb7ef2f9929281be, type: 3}
 --- !u!1 &2116057412
 GameObject:
   m_ObjectHideFlags: 0
