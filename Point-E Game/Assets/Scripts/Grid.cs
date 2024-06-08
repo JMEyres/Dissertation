@@ -23,12 +23,13 @@ public class Grid : MonoBehaviour
     [SerializeField] private string selectedBuilding;
     
     private BuildingPlaceable placeableObject;
-    private GameObject placeableObjectModel;
-    private GameObject placeableObjectPointCloud;
-    private GameObject placeableObjectBBox;
+    private List<GameObject> placeableObjectModel;
+    private List<GameObject> placeableObjectPointCloud;
+    
     float placeableObjectRotation = 0;
     
     private bool buildingSelected; 
+    private bool buildingPlaceable; 
     
     float gridLerpTimer;
     float lerpDirection;
@@ -69,7 +70,10 @@ public class Grid : MonoBehaviour
         if (placeableObject != null)
         {
             placeableObject.gameObject.SetActive(true);
-            placeableObject.mesh.SetActive(false);
+            foreach (var mesh in placeableObject.meshs)
+            {
+                mesh.SetActive(false);
+            }
         }
         else
         {
@@ -93,15 +97,24 @@ public class Grid : MonoBehaviour
 
     void PlaceBuilding()
     {
-        if (Input.GetMouseButtonDown(0) && placeableObject != null && buildingSelected)
+        if (Input.GetMouseButtonDown(0) && placeableObject != null && buildingSelected && placeableObject.IsPlaceable)
         {
-            var building = BuildingManager.PlaceBuilding(selectedBuilding); // need to setup selected building stuff so doesnt just pass in ""
-            building.transform.position = placeableObject.transform.position;
-            building.transform.localRotation = placeableObject.transform.localRotation;
-            
-            Destroy(placeableObject.gameObject);
-            buildingSelected = false;
-            selectedBuilding = "";
+            var building = BuildingManager.PlaceBuilding(selectedBuilding);
+            if(building != null)
+            {
+                building.transform.position = placeableObject.transform.position;
+                building.transform.localRotation = placeableObject.transform.localRotation;
+
+                Destroy(placeableObject.gameObject);
+                buildingSelected = false;
+                selectedBuilding = "";
+            }
+            else
+            {
+                Destroy(placeableObject.gameObject);
+                buildingSelected = false;
+                selectedBuilding = "";
+            }
         }
     }
 

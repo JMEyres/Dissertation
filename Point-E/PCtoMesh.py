@@ -20,7 +20,7 @@ print('loading SDF model...')
 model.load_state_dict(load_checkpoint(name, device))
 
 # Load a point cloud we want to convert into a mesh.
-prompt = "Railgun2"
+prompt = "skyscraper2"
 pc = PointCloud.load("Pointclouds/"+prompt)
 
 # Plot the point cloud as a sanity check.
@@ -31,7 +31,7 @@ mesh = marching_cubes_mesh(
     pc=pc,
     model=model,
     batch_size=4096,
-    grid_size=32, # increase to 128 for resolution used in evals
+    grid_size=128, # increase to 128 for resolution used in evals
     progress=True,
 )
 

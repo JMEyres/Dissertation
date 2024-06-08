@@ -32,12 +32,19 @@ public class BuildingManager : MonoBehaviour
 
     public static BuildingPlaceable PlaceBuilding(string _buildingName)
     {
-        var building = CreateBuilding(_buildingName);
-        //var buildingStats;
-        building.enabled = false;
-        //building.gameObject.SetActive(true);
-        building.mesh.SetActive(true);
-        building.pointCloud.SetActive(false);
-        return building;
+        if (PlayerStats.money >= instance.buildingPrefabs[_buildingName].price)
+        {
+            var building = CreateBuilding(_buildingName);
+            PlayerStats.money -= building.price;
+            //var buildingStats;
+            building.enabled = false;
+            foreach (var mesh in building.meshs)
+                mesh.SetActive(true);
+            foreach (var pointCloud in building.pointClouds)
+                pointCloud.SetActive(false);
+            return building;
+        }
+        else 
+            return null;
     }
 }

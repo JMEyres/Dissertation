@@ -34,12 +34,12 @@ sampler = PointCloudSampler(
     diffusions=[base_diffusion, upsampler_diffusion],
     num_points=[1024, 4096 - 1024],
     aux_channels=['R', 'G', 'B'],
-    guidance_scale=[10.0, 0.0],
+    guidance_scale=[3.0, 3.0],
     model_kwargs_key_filter=('texts', ''), # Do not condition the upsampler at all
 )
 
 # Set a prompt to condition on.
-prompt = 'a robot'
+prompt = 'big building'
 
 # Produce a sample from the model.
 samples = None

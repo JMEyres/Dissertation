@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5950384567592784246}
   - component: {fileID: 4727173456671687667}
+  - component: {fileID: 763980008926088835}
+  - component: {fileID: 6331914347219913988}
+  - component: {fileID: -3647833873041759119}
   m_Layer: 0
   m_Name: RailgunTurret
   m_TagString: Untagged
@@ -53,6 +56,73 @@ MonoBehaviour:
   rotationSpeed: 10
   bulletPrefab: {fileID: 6606403656024903767, guid: 00bad39ae377a1441a90b14ff8ff749a, type: 3}
   shootPoint: {fileID: 3723156318996062136}
+--- !u!114 &763980008926088835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224286696618107796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46b0d9439664f14f97eaa4a0fd6bfab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointClouds:
+  - {fileID: 9014737859327426093}
+  - {fileID: 7047166500132289224}
+  meshs:
+  - {fileID: 8323275546549240145}
+  - {fileID: 3835572082244027292}
+  price: 100
+--- !u!65 &6331914347219913988
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224286696618107796}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.7599556, z: 1}
+  m_Center: {x: 0, y: 1.8434614, z: 0}
+--- !u!54 &-3647833873041759119
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224286696618107796}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &2343762061913265322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,7 +175,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CastleTower
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6330569696750049147, guid: acd1f04b3d55655458889c1c7b3f8777, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -113,6 +184,16 @@ PrefabInstance:
 --- !u!4 &7146740130236860170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4875398822855742368, guid: acd1f04b3d55655458889c1c7b3f8777, type: 3}
+  m_PrefabInstance: {fileID: 2343762061913265322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8323275546549240145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5982047147588310523, guid: acd1f04b3d55655458889c1c7b3f8777, type: 3}
+  m_PrefabInstance: {fileID: 2343762061913265322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9014737859327426093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6745406526843349639, guid: acd1f04b3d55655458889c1c7b3f8777, type: 3}
   m_PrefabInstance: {fileID: 2343762061913265322}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8184701870781131622
@@ -194,8 +275,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4951359012948822809, guid: 98fa73ab467f0fd4690f05a28e11f424, type: 3}
   m_PrefabInstance: {fileID: 8184701870781131622}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3835572082244027292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4949269623274858746, guid: 98fa73ab467f0fd4690f05a28e11f424, type: 3}
+  m_PrefabInstance: {fileID: 8184701870781131622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6484661078237018060 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2912634992519290026, guid: 98fa73ab467f0fd4690f05a28e11f424, type: 3}
+  m_PrefabInstance: {fileID: 8184701870781131622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7047166500132289224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1178102951970378158, guid: 98fa73ab467f0fd4690f05a28e11f424, type: 3}
   m_PrefabInstance: {fileID: 8184701870781131622}
   m_PrefabAsset: {fileID: 0}
