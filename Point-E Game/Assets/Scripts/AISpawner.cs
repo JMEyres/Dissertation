@@ -28,7 +28,7 @@ public class AISpawner : MonoBehaviour
 
     private void spawnEnemy(GameObject _enemy)
     {
-        GameObject newEnemy = Instantiate(_enemy, gameObject.transform);
+        GameObject newEnemy = Instantiate(_enemy, transform);
         var tempPos = newEnemy.transform.position;
         tempPos.x += UnityEngine.Random.Range(spawnBoundsX.x, spawnBoundsX.y);
         tempPos.z += UnityEngine.Random.Range(spawnBoundsZ.x, spawnBoundsZ.y);

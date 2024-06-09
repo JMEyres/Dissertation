@@ -38,5 +38,6 @@ public class Bullet : MonoBehaviour
         Destroy(effectInstance, 2f);
         Destroy(target.gameObject);
         Destroy(gameObject);
+        PlayerStats.money += 1;
     }
 }

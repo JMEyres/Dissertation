@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6331914347219913988}
   - component: {fileID: -3647833873041759119}
   m_Layer: 0
-  m_Name: Test
+  m_Name: Railgun Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,6 +56,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6606403656024903767, guid: 00bad39ae377a1441a90b14ff8ff749a, type: 3}
   shootPoint: {fileID: 3723156318996062136}
   buildingStats: {fileID: 7915323859563149904}
+  enable: 0
 --- !u!114 &763980008926088835
 MonoBehaviour:
   m_ObjectHideFlags: 0

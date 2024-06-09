@@ -22,6 +22,8 @@ public class Turret : MonoBehaviour
     public Transform shootPoint;
 
     public BuildingStats buildingStats;
+
+    public bool enable = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,22 +38,25 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(target == null)
-           return;
+        if (!enable)
+            target = null;
+        
+        if (target == null)
+            return;
 
-       Vector3 dir = target.position - transform.position;
-       Quaternion lookAt = Quaternion.LookRotation(dir);
-       Vector3 rotation = Quaternion.Lerp(pivot.rotation, lookAt, Time.deltaTime * rotationSpeed).eulerAngles;
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookAt = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(pivot.rotation, lookAt, Time.deltaTime * rotationSpeed).eulerAngles;
 
-       pivot.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        pivot.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
-       if (fireCountdown <= 0f)
-       {
-           Shoot();
-           fireCountdown = 1f / buildingStats.fireRate;
-       }
+        if (fireCountdown <= 0f)
+        {
+            Shoot();
+            fireCountdown = 1f / buildingStats.fireRate;
+        }
 
-       fireCountdown -= Time.deltaTime;
+        fireCountdown -= Time.deltaTime;
     }
 
     void UpdateTarget()

@@ -17,7 +17,7 @@ public class EnemyAgent : MonoBehaviour
         navAgent = GetComponent<NavMeshAgent>();
         if (target == null)
         {
-            target = GameObject.Find("Destination");
+            target = GameObject.Find("Base");
         }
         
         HeadForDestination();

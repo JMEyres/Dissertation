@@ -12,8 +12,6 @@ public class Grid : MonoBehaviour
     [Header("Required References")]
     [SerializeField] private Camera cam;
     [SerializeField] private Vector2 gridCellSize; // Should be equal to placeable size - i.e. 1x1 cube
-    [SerializeField] private int gridW;
-    [SerializeField] private int gridH;
 
     [Header("Colors")] 
     [SerializeField] private Color placeable;
@@ -23,9 +21,7 @@ public class Grid : MonoBehaviour
     [SerializeField] private string selectedBuilding;
     
     private BuildingPlaceable placeableObject;
-    private List<GameObject> placeableObjectModel;
-    private List<GameObject> placeableObjectPointCloud;
-    
+
     float placeableObjectRotation = 0;
     
     private bool buildingSelected; 
@@ -105,6 +101,8 @@ public class Grid : MonoBehaviour
                 building.transform.position = placeableObject.transform.position;
                 building.transform.localRotation = placeableObject.transform.localRotation;
 
+                building.GetComponent<Turret>().enable = true;
+                
                 Destroy(placeableObject.gameObject);
                 buildingSelected = false;
                 selectedBuilding = "";

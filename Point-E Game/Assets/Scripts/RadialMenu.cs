@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class RadialMenu : MonoBehaviour
 {
+    [Header("Parent Object")] 
+    [SerializeField] private GameObject parent;
+
     [Header("Mask")]
     [SerializeField] private GameObject radialMask;
     [SerializeField] private float maskRadius;
@@ -22,7 +25,7 @@ public class RadialMenu : MonoBehaviour
     [SerializeField] private GameObject textPrefab;
     
     [Header("Required")]
-    [SerializeField] private List<string> buildables;
+    [SerializeField] private List<BuildingPlaceable> buildables;
     [SerializeField] private Color normalColor;
     [SerializeField] private Color highlightedColor;
 
@@ -34,17 +37,20 @@ public class RadialMenu : MonoBehaviour
     private RectTransform BGRect;
 
     private List<GameObject> radialLines = new List<GameObject>();
+    private List<GameObject> textObjects = new List<GameObject>();
 
     private Vector2 mousePos;
     
     private int numOfSegments;
     private Image segmentImage;
     private int selectedSegment;
-    
+
     void Awake()
     {
-        radialMaskRef = Instantiate(radialMask, transform);
-        radialBGRef = Instantiate(radialBackground, transform);
+        parent.SetActive(false);
+        parent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 0);
+        radialMaskRef = Instantiate(radialMask, parent.transform);
+        radialBGRef = Instantiate(radialBackground, parent.transform);
         segmentRef = Instantiate(segment, radialBGRef.transform);
 
         maskRect = radialMaskRef.GetComponent<RectTransform>();
@@ -53,11 +59,25 @@ public class RadialMenu : MonoBehaviour
 
         numOfSegments = buildables.Count;
         
-        maskRect.sizeDelta = new Vector2(maskRadius * 2, maskRadius * 2);
+        maskRect.sizeDelta = new Vector2(maskRadius * 2, maskRadius * 2); 
         BGRect.sizeDelta = new Vector2(backgroundRadius * 2, backgroundRadius * 2);
-        segmentRef.GetComponent<RectTransform>().sizeDelta = new Vector2(backgroundRadius * 2, backgroundRadius * 2);
-        segmentImage.fillAmount = 1.0f/numOfSegments;
 
+       segmentRef.GetComponent<RectTransform>().sizeDelta = new Vector2(backgroundRadius * 2, backgroundRadius * 2);
+       segmentImage.fillAmount = 1.0f/numOfSegments;
+        
+        float angleSize = 360.0f / numOfSegments;
+
+        if(buildables.Count == 0)
+            Debug.LogError("You need to assign prefab strings in the inspector, make sure they are formatted exactly the same as the prefab name");
+        
+        for (int i = 0; i < buildables.Count; i++)
+        {
+            var tempText = Instantiate(textPrefab, parent.transform);
+            tempText.GetComponent<TextMeshProUGUI>().text = buildables[i].gameObject.name;
+            tempText.transform.localEulerAngles = new Vector3(0, 0, (i + 1) * angleSize);
+            tempText.transform.Translate(new Vector3(0, backgroundRadius*0.75f, 0),Space.Self); 
+            tempText.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
 
         if(numOfSegments != 1)
         {
@@ -72,11 +92,8 @@ public class RadialMenu : MonoBehaviour
                 
                 radialLines.Add(temp);
 
-                var tempText = Instantiate(textPrefab, transform);
-                tempText.GetComponent<TextMeshProUGUI>().text = buildables[i];
-                tempText.transform.localEulerAngles = new Vector3(0, 0, 120);
-                tempText.transform.Translate(new Vector3(0, backgroundRadius*0.75f, 0),Space.Self); 
-                tempText.transform.localEulerAngles = new Vector3(0, 0, 0);
+                radialLines[i].GetComponent<RectTransform>().localEulerAngles =
+                    new Vector3(0, 180, (i + 1) * angleSize);
             }
         }
     }
@@ -103,8 +120,7 @@ public class RadialMenu : MonoBehaviour
                 for (int i = 0; i < numOfSegments; i++)
                 {
                     float angleSize = 360.0f / numOfSegments;
-                    radialLines[i].GetComponent<RectTransform>().localEulerAngles =
-                        new Vector3(0, 180, (i + 1) * angleSize);
+                    
                     if (angle > i * angleSize && angle < (i + 1) * angleSize)
                     {
                         segmentRef.transform.localEulerAngles = new Vector3(0, 180, (i + 1) * angleSize);
@@ -116,11 +132,16 @@ public class RadialMenu : MonoBehaviour
             {
                 selectedSegment = 0;
             }
-
-            if (Input.GetMouseButtonDown(0))
+            
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                Grid.SelectBuilding(buildables[selectedSegment]);
-                gameObject.SetActive(false);
+                parent.SetActive(true);
+            }
+
+            if (parent.activeSelf && Input.GetMouseButtonDown(0))
+            {
+                Grid.SelectBuilding(buildables[selectedSegment].gameObject.name);
+                parent.SetActive(false);
             }
         }
     }

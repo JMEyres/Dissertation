@@ -6,7 +6,7 @@ public class BuildingManager : MonoBehaviour
 {
     [Header("Building Prefabs")] 
     [SerializeField] private List<BuildingPlaceable> buildingList;
-
+    
     private Dictionary<string, BuildingPlaceable> buildingPrefabs;
 
     private static BuildingManager instance;
@@ -37,7 +37,6 @@ public class BuildingManager : MonoBehaviour
         {
             var building = CreateBuilding(_buildingName);
             PlayerStats.money -= building.buildingStats.price;
-            //var buildingStats;
             building.enabled = false;
             foreach (var mesh in building.meshs)
                 mesh.SetActive(true);
