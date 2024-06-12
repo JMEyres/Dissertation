@@ -9,7 +9,7 @@ public class AISpawner : MonoBehaviour
     [SerializeField] private float spawnInterval = 3.5f;
     [SerializeField] private Vector2 spawnBoundsX;
     [SerializeField] private Vector2 spawnBoundsZ;
-    [SerializeField] private List<EnemyBase> enemyTypes;
+
     private float timer = 0;
 
     private bool waveStart = false;
@@ -41,8 +41,7 @@ public class AISpawner : MonoBehaviour
         {
             if (timer >= spawnInterval)
             {
-                Debug.Log("SPAWN");
-                spawnEnemy(enemyPrefab);
+                spawnEnemy(enemyPrefab, 1);
                 timer = 0;
                 enemyCount--;
             }
@@ -54,9 +53,10 @@ public class AISpawner : MonoBehaviour
         }
     }
 
-    private void spawnEnemy(GameObject _enemy)
+    private void spawnEnemy(GameObject _enemy, int _enemyType)
     {
         GameObject newEnemy = Instantiate(_enemy, transform);
+        newEnemy.GetComponent<EnemyStats>().enemyType = _enemyType;
         var tempPos = newEnemy.transform.position;
         tempPos.x += UnityEngine.Random.Range(spawnBoundsX.x, spawnBoundsX.y);
         tempPos.z += UnityEngine.Random.Range(spawnBoundsZ.x, spawnBoundsZ.y);

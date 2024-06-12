@@ -21,14 +21,15 @@ public class EnemyMovement : MonoBehaviour
         
         if(navAgent == null) navAgent = GetComponent<NavMeshAgent>();
         if(enemyStats == null) enemyStats = GetComponent<EnemyStats>();
-        
-        HeadForDestination();
-    }
+        navAgent.speed = enemyStats.enemySpeed;
 
+        HeadForDestination();
+
+    }
+    
     private void HeadForDestination()
     {
         Vector3 destination = target.transform.position;
-        navAgent.speed = enemyStats.enemySpeed;
         navAgent.SetDestination(destination);
     }
     

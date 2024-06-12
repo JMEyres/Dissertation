@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66228dd6d8255646ab8704e4bd147df, type: 3}
   m_Name: Robot
   m_EditorClassIdentifier: 
-  prefabName: {fileID: 8260635967014836686, guid: fc69b7bab70b22d4b86e9325552e2420, type: 3}
+  prefab: {fileID: 8260635967014836686, guid: fc69b7bab70b22d4b86e9325552e2420, type: 3}
   enemyHealth: 50
   enemyDamage: 10
   enemySpeed: 10

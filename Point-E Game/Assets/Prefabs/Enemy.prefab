@@ -135,7 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e2987e12ce661419663de2f8696a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBase: {fileID: 0}
+  enemyBase:
+  - {fileID: 11400000, guid: b892037aa6c704a4882eee4fd7af10b2, type: 2}
+  - {fileID: 11400000, guid: 6d06eb5733a51004aaaeb765e3e806cc, type: 2}
+  enemyType: 0
   prefab: {fileID: 0}
   enemyHealth: 0
   enemyDamage: 0
