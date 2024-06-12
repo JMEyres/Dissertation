@@ -20,7 +20,7 @@ print('loading SDF model...')
 model.load_state_dict(load_checkpoint(name, device))
 
 # Load a point cloud we want to convert into a mesh.
-prompt = "robot"
+prompt = ("MachineGunTurret3.1")
 pc = PointCloud.load("Pointclouds/"+prompt)
 
 # Plot the point cloud as a sanity check.
@@ -36,5 +36,5 @@ mesh = marching_cubes_mesh(
 )
 
 # Write the mesh to a PLY file to import into some other program.
-with open("Meshes/"+prompt+'.1.ply', 'wb') as f:
+with open("Meshes/"+prompt+'.ply', 'wb') as f:
     mesh.write_ply(f)

@@ -4,21 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAgent : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private List<GameObject> waypoints;
+    [SerializeField] private EnemyStats enemyStats;
     [SerializeField] private GameObject target;
-    //[SerializeField] private PlayerStats stats;
 
     private NavMeshAgent navAgent;
-    // Start is called before the first frame update
+
     void Start()
     {
-        navAgent = GetComponent<NavMeshAgent>();
         if (target == null)
         {
             target = GameObject.Find("Base");
         }
+        
+        if(navAgent == null) navAgent = GetComponent<NavMeshAgent>();
+        if(enemyStats == null) enemyStats = GetComponent<EnemyStats>();
         
         HeadForDestination();
     }
@@ -26,6 +28,7 @@ public class EnemyAgent : MonoBehaviour
     private void HeadForDestination()
     {
         Vector3 destination = target.transform.position;
+        navAgent.speed = enemyStats.enemySpeed;
         navAgent.SetDestination(destination);
     }
     

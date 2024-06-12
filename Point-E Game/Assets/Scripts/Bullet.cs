@@ -3,12 +3,15 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Transform target;
-    public float speed = 70f;
+    private EnemyStats enemyStats;
+    public float speed;
+    public float damage;
     public GameObject impactEffect;
 
     public void SetTarget(Transform _target)
     {
         target = _target;
+        enemyStats = target.GetComponent<EnemyStats>();
     }
 
     // Update is called once per frame
@@ -16,7 +19,6 @@ public class Bullet : MonoBehaviour
     {
         if (target == null)
         {
-            Destroy(gameObject);
             return;
         }
 
@@ -34,10 +36,15 @@ public class Bullet : MonoBehaviour
 
     private void HitTarget()
     {
-        GameObject effectInstance = Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectInstance, 2f);
-        Destroy(target.gameObject);
+        enemyStats.enemyHealth -= damage;
+        if(enemyStats.enemyHealth <= 0)
+        {
+            GameObject effectInstance = Instantiate(impactEffect, transform.position, transform.rotation);
+            Destroy(effectInstance, 2f);
+            Destroy(target.gameObject);
+            Destroy(gameObject);
+            PlayerStats.money += 1;
+        }
         Destroy(gameObject);
-        PlayerStats.money += 1;
     }
 }

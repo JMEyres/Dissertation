@@ -1,13 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
     private Transform target;
+    private BuildingStats buildingStats;
     
     [Header("Attributes")]
     private float fireCountdown = 0f;
@@ -20,8 +16,6 @@ public class Turret : MonoBehaviour
     
     public GameObject bulletPrefab;
     public Transform shootPoint;
-
-    public BuildingStats buildingStats;
 
     public bool enable = false;
     // Start is called before the first frame update
@@ -41,6 +35,8 @@ public class Turret : MonoBehaviour
         if (!enable)
             target = null;
         
+        fireCountdown -= Time.deltaTime;
+
         if (target == null)
             return;
 
@@ -53,10 +49,10 @@ public class Turret : MonoBehaviour
         if (fireCountdown <= 0f)
         {
             Shoot();
-            fireCountdown = 1f / buildingStats.fireRate;
+            fireCountdown = 1f / buildingStats.buildingFireRate;
         }
 
-        fireCountdown -= Time.deltaTime;
+        
     }
 
     void UpdateTarget()
@@ -75,7 +71,7 @@ public class Turret : MonoBehaviour
             }
         }
 
-        if (closestEnemy != null && closestDistance <= buildingStats.range)
+        if (closestEnemy != null && closestDistance <= buildingStats.buildingRange)
             target = closestEnemy.transform;
         else
             target = null;
@@ -85,12 +81,14 @@ public class Turret : MonoBehaviour
     {
         GameObject bulletGO = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        bullet.damage = buildingStats.buildingDamage;
+        bullet.speed = buildingStats.buildingBulletSpeed;
         if (bullet != null) bullet.SetTarget(target);
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, buildingStats.range);
+        Gizmos.DrawWireSphere(transform.position, buildingStats.buildingRange);
     }
 }

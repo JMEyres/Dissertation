@@ -37,8 +37,8 @@ sampler = PointCloudSampler(
 )
 
 # Load an image to condition on.
-prompt = "skyscraper2"
-img = Image.open("Images/" + prompt + ".png")
+prompt = "GatlingGun"
+img = Image.open("Images/" + prompt + ".jpg")
 
 # Produce a sample from the model.
 samples = None
@@ -47,5 +47,5 @@ for x in tqdm(sampler.sample_batch_progressive(batch_size=1, model_kwargs=dict(i
 
 pc = sampler.output_to_point_clouds(samples)[0]
 
-pc.save("Pointclouds/" + prompt)
+pc.save("Pointclouds/" + prompt + ".1")
 fig = plot_point_cloud(pc, grid_size=3, fixed_bounds=((-0.75, -0.75, -0.75), (0.75, 0.75, 0.75)))

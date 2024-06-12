@@ -33,10 +33,10 @@ public class BuildingManager : MonoBehaviour
 
     public static BuildingPlaceable PlaceBuilding(string _buildingName)
     {
-        if (PlayerStats.money >= instance.buildingPrefabs[_buildingName].buildingStats.price)
+        if (PlayerStats.money >= instance.buildingPrefabs[_buildingName].buildingStats.buildingCost)
         {
             var building = CreateBuilding(_buildingName);
-            PlayerStats.money -= building.buildingStats.price;
+            PlayerStats.money -= building.buildingStats.buildingCost;
             building.enabled = false;
             foreach (var mesh in building.meshs)
                 mesh.SetActive(true);

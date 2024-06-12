@@ -10,7 +10,7 @@ public class AISpawner : MonoBehaviour
     [SerializeField] private Vector2 spawnBoundsX;
     [SerializeField] private Vector2 spawnBoundsZ;
     private float timer;
-    
+
     void Start()
     {
         timer = 0;
