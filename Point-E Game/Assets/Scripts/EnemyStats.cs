@@ -6,7 +6,7 @@ public class EnemyStats : MonoBehaviour
 {
     public EnemyBase enemyBase;
 
-    public GameObject prefabName;
+    public GameObject prefab;
     public float enemyHealth;
     public float enemyDamage;
     public float enemySpeed;
@@ -15,7 +15,7 @@ public class EnemyStats : MonoBehaviour
     {
         if(enemyBase != null)
         {
-            prefabName = enemyBase.prefabName;
+            prefab = enemyBase.prefab;
             enemyHealth = enemyBase.enemyHealth;
             enemyDamage = enemyBase.enemyDamage;
             enemySpeed = enemyBase.enemySpeed;

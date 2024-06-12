@@ -2290,6 +2290,18 @@ PrefabInstance:
       propertyPath: spawnBoundsZ.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3311142596961792442, guid: aa3896c4800c2074b8218814d6fdf088, type: 3}
+      propertyPath: enemyTypes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3311142596961792442, guid: aa3896c4800c2074b8218814d6fdf088, type: 3}
+      propertyPath: enemyTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b892037aa6c704a4882eee4fd7af10b2, type: 2}
+    - target: {fileID: 3311142596961792442, guid: aa3896c4800c2074b8218814d6fdf088, type: 3}
+      propertyPath: enemyTypes.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d06eb5733a51004aaaeb765e3e806cc, type: 2}
     - target: {fileID: 3458082133769842429, guid: aa3896c4800c2074b8218814d6fdf088, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01

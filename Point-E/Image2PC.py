@@ -33,11 +33,11 @@ sampler = PointCloudSampler(
     diffusions=[base_diffusion, upsampler_diffusion],
     num_points=[1024, 4096 - 1024],
     aux_channels=['R', 'G', 'B'],
-    guidance_scale=[10.0, 10.0],
+    guidance_scale=[5.0, 0.0],
 )
 
 # Load an image to condition on.
-prompt = "GatlingGun"
+prompt = "Quadlauncher"
 img = Image.open("Images/" + prompt + ".jpg")
 
 # Produce a sample from the model.
