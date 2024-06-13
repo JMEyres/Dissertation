@@ -42,6 +42,7 @@ public class Bullet : MonoBehaviour
         if(enemyStats.enemyHealth <= 0)
         {
             PlayerStats.money += enemyStats.enemyReward;
+            PlayerStats.totalKills++;
             parent.GetComponent<BuildingStats>().buildingXP++;
             GameObject effectInstance = Instantiate(impactEffect, transform.position, transform.rotation, parent.transform);
             Destroy(effectInstance, 2f);
