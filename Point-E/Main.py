@@ -39,7 +39,7 @@ sampler = PointCloudSampler(
 )
 
 # Set a prompt to condition on.
-prompt = ('Block')
+prompt = ('Dollar')
 
 # Produce a sample from the model.
 samples = None

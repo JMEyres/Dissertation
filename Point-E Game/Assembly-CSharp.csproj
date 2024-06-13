@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2022_3_13;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2022_3_13;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -50,6 +50,8 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\PCVisualizer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\Dynamic Grass FX\Demo\Scripts\Move.cs" />
+     <Compile Include="Assets\Dynamic Grass FX\Demo\Scripts\Rotate.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
      <Compile Include="Assets\Scripts\BuildingStats.cs" />
@@ -99,12 +101,17 @@
      <Compile Include="Assets\Scripts\IncomeBuilding.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Dynamic Grass FX\Demo" />
+     <Folder Include="Assets\Dynamic Grass FX\Demo\Models\Materials" />
      <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\package.json" />
+     <None Include="Assets\Dynamic Grass FX\Shaders\Helpers.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
      <Folder Include="Assets\ScriptableObjects\MoneyPrinter" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Sprites" />
      <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.imgui@1.0.0" />
@@ -116,8 +123,11 @@
      <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.xr@1.0.0" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <Folder Include="Assets\Dynamic Grass FX\Shaders" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Textures\SMAA" />
      <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Textures\BlueNoise64" />
      <None Include="Library\PackageCache\com.unity.modules.imgui@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
@@ -132,34 +142,47 @@
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0" />
      <Folder Include="Assets\ScriptableObjects" />
+     <None Include="Assets\Dynamic Grass FX\Shaders\Grass.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.cloth@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.feature.development@1.0.1" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Textures\FilmGrain" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.9\ValidationConfig.json" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.9\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@14.0.9\package.json" />
      <None Include="Library\PackageCache\com.unity.feature.development@1.0.1\package.json" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\PointEMeshes" />
      <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.video@1.0.0\package.json" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@14.0.9\ValidationConfig.json" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts" />
+     <Folder Include="Library\PackageCache\com.unity.shadergraph@14.0.9\Tests" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources" />
      <Folder Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.physics@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.vr@1.0.0" />
+     <Folder Include="Assets\Dynamic Grass FX\Demo\Animations" />
      <Folder Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0" />
      <Folder Include="Assets\Images" />
+     <Folder Include="Assets\Dynamic Grass FX" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9" />
      <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.wind@1.0.0" />
+     <Folder Include="Assets\Dynamic Grass FX\Demo\Scripts" />
      <Folder Include="Assets\Scripts" />
+     <Folder Include="Library\PackageCache\com.unity.shadergraph@14.0.9" />
      <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Library\PackageCache\com.unity.modules.vr@1.0.0\package.json" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Textures\BlueNoise64\L" />
      <Folder Include="Library\PackageCache\com.unity.modules.uielements@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -176,46 +199,56 @@
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Textures" />
      <Folder Include="Assets\ScriptableObjects\Waves" />
      <Folder Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <Folder Include="Assets\TextMesh Pro\Shaders" />
      <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Textures\2D" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources\Sprite Assets" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\ValidationExceptions.json" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.9" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Prefabs" />
      <None Include="Assets\PCFiles\Photocopier.txt" />
      <Folder Include="Assets\ScriptableObjects\Railgun" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Textures\BlueNoise16" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scenes" />
      <Folder Include="Assets\Materials" />
+     <Folder Include="Assets\Dynamic Grass FX\Demo\Models" />
      <None Include="Assets\PCFiles\Railgun2.txt" />
      <Folder Include="Assets\ScriptableObjects\GatlingGun" />
      <None Include="Assets\PCFiles\a castle tower.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.9\Tests" />
      <None Include="Assets\PCFiles\Quadlauncher.1.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.umbra@1.0.0" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.director@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Textures\BlueNoise256" />
      <None Include="Assets\PCFiles\robot.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
      <Folder Include="Assets\Scenes" />
+     <None Include="Assets\Dynamic Grass FX\Shaders\GrassTessellation.cginc" />
      <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.ai@1.0.0" />
      <None Include="Assets\PCFiles\futuristic building.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\Textures\BlueNoise16\L" />
      <None Include="Assets\PCFiles\Tank Turret.txt" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
@@ -224,7 +257,9 @@
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets\PostProcessing" />
      <Folder Include="Assets\Materials\Textures" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.9\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
      <Folder Include="Assets\ScriptableObjects\Rocket" />
      <None Include="Assets\PCFiles\Turret1.txt" />
@@ -858,14 +893,56 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.EditorCoroutines.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Postprocessing.Runtime">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Shared.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
@@ -879,44 +956,29 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.AI.Navigation.Updater">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <Reference Include="Unity.Postprocessing.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <Reference Include="Unity.Mathematics">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.AI.Navigation.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
@@ -927,21 +989,55 @@
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{fd4dd0d3-9792-6bfc-9d5f-c3fc832c5f64}</Project>
-      <Name>UnityEngine.UI</Name>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{a3cfc094-2882-1636-fd7e-78fce507fada}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{f18400a2-a408-5b18-8cfe-e2ff39e61abd}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{1024a284-a183-bcb4-0937-62bb1111c141}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{6c7d3d48-52d1-cfe5-d145-d99c32bdb502}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{b585f543-21c9-bcf6-9932-b5a4e4dae3f8}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{fd4dd0d3-9792-6bfc-9d5f-c3fc832c5f64}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{1acbff53-e41e-1096-3760-ec389e5bc4e1}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{5dc2f390-3e6e-fe17-bb11-8a928d643c5e}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{472c1ebc-61a5-d97f-1600-ee136153c589}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="PPv2URPConverters.csproj">
+      <Project>{dabeddaa-c6af-0276-5b88-0a170f86abf0}</Project>
+      <Name>PPv2URPConverters</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{9e6c7104-8c4d-15aa-5d07-53039aaf1e85}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{77404b5c-86b9-a9fa-95cf-c417656f2608}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

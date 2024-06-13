@@ -4892,9 +4892,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -344346057179149211, guid: 63993267fb9a1604b8444369838d9eda, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fdda62381b5007d44ab3a47accfabff0, type: 2}
     - target: {fileID: 919132149155446097, guid: 63993267fb9a1604b8444369838d9eda, type: 3}
       propertyPath: m_Name
-      value: CastleTower
+      value: Castle Tower
       objectReference: {fileID: 0}
     - target: {fileID: 5819204870787651696, guid: 63993267fb9a1604b8444369838d9eda, type: 3}
       propertyPath: m_LocalScale.x
