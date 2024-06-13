@@ -74,7 +74,7 @@ public class RadialMenu : MonoBehaviour
         {
             var tempText = Instantiate(textPrefab, parent.transform);
             tempText.GetComponent<TextMeshProUGUI>().text = buildables[i].gameObject.name;
-            tempText.transform.localEulerAngles = new Vector3(0, 0, (i + 1) * angleSize);
+            tempText.transform.localEulerAngles = new Vector3(0, 0, -(i + 0.5f) * angleSize + 180);
             tempText.transform.Translate(new Vector3(0, backgroundRadius*0.75f, 0),Space.Self); 
             tempText.transform.localEulerAngles = new Vector3(0, 0, 0);
         }

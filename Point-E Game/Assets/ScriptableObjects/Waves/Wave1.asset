@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc08d1fdc9a5dc4b9b86ad0ed066616, type: 3}
+  m_Name: Wave1
+  m_EditorClassIdentifier: 
+  robotCount: 2
+  robotHealth: 100
+  robotDamage: 20
+  robotSpeed: 5
+  robotReward: 30
+  robotSpawnInterval: 5
+  alienCount: 5
+  alienHealth: 50
+  alienDamage: 10
+  alienSpeed: 10
+  alienReward: 20
+  alienSpawnInterval: 3
+  wolfCount: 10
+  wolfHealth: 20
+  wolfDamage: 5
+  wolfSpeed: 15
+  wolfReward: 10
+  wolfSpawnInterval: 2

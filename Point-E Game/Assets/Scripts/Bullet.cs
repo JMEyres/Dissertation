@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     public float damage;
     public GameObject impactEffect;
 
+    public GameObject parent;
+
     public void SetTarget(Transform _target)
     {
         target = _target;
@@ -39,11 +41,12 @@ public class Bullet : MonoBehaviour
         enemyStats.enemyHealth -= damage;
         if(enemyStats.enemyHealth <= 0)
         {
-            GameObject effectInstance = Instantiate(impactEffect, transform.position, transform.rotation);
+            PlayerStats.money += enemyStats.enemyReward;
+            parent.GetComponent<BuildingStats>().buildingXP++;
+            GameObject effectInstance = Instantiate(impactEffect, transform.position, transform.rotation, parent.transform);
             Destroy(effectInstance, 2f);
             Destroy(target.gameObject);
             Destroy(gameObject);
-            PlayerStats.money += 1;
         }
         Destroy(gameObject);
     }

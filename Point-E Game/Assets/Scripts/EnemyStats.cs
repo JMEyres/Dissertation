@@ -12,15 +12,13 @@ public class EnemyStats : MonoBehaviour
     public float enemyHealth;
     public float enemyDamage;
     public float enemySpeed;
+    public int enemyReward;
 
     private void Start()
     {
         if(enemyBase[enemyType] != null)
         {
             prefab = enemyBase[enemyType].prefab;
-            enemyHealth = enemyBase[enemyType].enemyHealth;
-            enemyDamage = enemyBase[enemyType].enemyDamage;
-            enemySpeed = enemyBase[enemyType].enemySpeed;
         }
         
         Instantiate(prefab, transform);

@@ -95,17 +95,21 @@ public class Grid : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && placeableObject != null && buildingSelected && placeableObject.IsPlaceable)
         {
-            var building = BuildingManager.PlaceBuilding(selectedBuilding);
-            if(building != null)
+            if(PlayerStats.money >= placeableObject.GetComponent<BuildingStats>().buildingCost)
             {
-                building.transform.position = placeableObject.transform.position;
-                building.transform.localRotation = placeableObject.transform.localRotation;
+                var building = BuildingManager.PlaceBuilding(selectedBuilding);
+                if (building != null)
+                {
+                    building.transform.position = placeableObject.transform.position;
+                    building.transform.localRotation = placeableObject.transform.localRotation;
 
-                building.GetComponent<Turret>().enable = true;
-                
-                Destroy(placeableObject.gameObject);
-                buildingSelected = false;
-                selectedBuilding = "";
+                    if (building.GetComponent<Turret>()) building.GetComponent<Turret>().enable = true;
+                    if (building.GetComponent<IncomeBuilding>()) building.GetComponent<IncomeBuilding>().enable = true;
+
+                    Destroy(placeableObject.gameObject);
+                    buildingSelected = false;
+                    selectedBuilding = "";
+                }
             }
             else
             {

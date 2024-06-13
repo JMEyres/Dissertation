@@ -1,7 +1,7 @@
 import numpy as np
 from point_e.util.point_cloud import PointCloud
 
-prompt = "Minigun"
+prompt = "Photocopier"
 pc = PointCloud.load("Pointclouds/"+prompt)
 f = open("PCtxtFiles/"+prompt+".txt", "w")
 

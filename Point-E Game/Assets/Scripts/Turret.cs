@@ -51,8 +51,6 @@ public class Turret : MonoBehaviour
             Shoot();
             fireCountdown = 1f / buildingStats.buildingFireRate;
         }
-
-        
     }
 
     void UpdateTarget()
@@ -81,6 +79,7 @@ public class Turret : MonoBehaviour
     {
         GameObject bulletGO = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        bullet.parent = gameObject;
         bullet.damage = buildingStats.buildingDamage;
         bullet.speed = buildingStats.buildingBulletSpeed;
         if (bullet != null) bullet.SetTarget(target);
@@ -89,6 +88,7 @@ public class Turret : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, buildingStats.buildingRange);
+        if(buildingStats != null)
+            Gizmos.DrawWireSphere(transform.position, buildingStats.buildingRange);
     }
 }

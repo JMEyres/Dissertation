@@ -5,25 +5,50 @@ using UnityEngine;
 
 public class BuildingStats : MonoBehaviour
 {
-    public BuildingBase buildingBase;
+    public List<BuildingBase> buildingBase;
+    public BuildingBase startingBuildingBase;
     
     public GameObject buildingPrefab;
     public float buildingRange;
     public float buildingDamage;
     public float buildingFireRate;
     public float buildingBulletSpeed;
+    public int buildingIncome;
     public int buildingCost;
+    public float buildingXP;
+
+    private int buildingLevel;
 
     private void Awake()
     {
         if(buildingBase != null)
         {
-            buildingPrefab = buildingBase.buildingPrefab;
-            buildingRange = buildingBase.buildingRange;
-            buildingDamage = buildingBase.buildingDamage;
-            buildingFireRate = buildingBase.buildingFireRate;
-            buildingBulletSpeed = buildingBase.buildingBulletSpeed;
-            buildingCost = buildingBase.buildingCost;
+            startingBuildingBase = buildingBase[0];
+            buildingPrefab = startingBuildingBase.buildingPrefab;
+            buildingRange = startingBuildingBase.buildingRange;
+            buildingDamage = startingBuildingBase.buildingDamage;
+            buildingFireRate = startingBuildingBase.buildingFireRate;
+            buildingBulletSpeed = startingBuildingBase.buildingBulletSpeed;
+            buildingIncome = startingBuildingBase.buildingIncome;
+            buildingCost = startingBuildingBase.buildingCost;
+        }
+    }
+
+    private void Update()
+    {
+        if (buildingXP >= 10)
+        {
+            if (buildingLevel != buildingBase.Count) buildingLevel++;
+            buildingXP = 0;
+        }
+
+        if(buildingBase != null)
+        {
+            buildingRange = buildingBase[buildingLevel].buildingRange;
+            buildingDamage = buildingBase[buildingLevel].buildingDamage;
+            buildingFireRate = buildingBase[buildingLevel].buildingFireRate;
+            buildingBulletSpeed = buildingBase[buildingLevel].buildingBulletSpeed;
+            buildingIncome = buildingBase[buildingLevel].buildingIncome;
         }
     }
 }

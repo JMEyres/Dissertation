@@ -11,5 +11,6 @@ public class BuildingBase : ScriptableObject
     public float buildingDamage;
     public float buildingFireRate;
     public float buildingBulletSpeed;
+    public int buildingIncome;
     public int buildingCost;
 }

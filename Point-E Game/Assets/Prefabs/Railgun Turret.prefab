@@ -135,13 +135,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba073d9a0545024bb59d8e8ff5f5667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingBase: {fileID: 11400000, guid: b90a0bb916679934ea2f14bf6645d38d, type: 2}
+  buildingBase:
+  - {fileID: 11400000, guid: b90a0bb916679934ea2f14bf6645d38d, type: 2}
+  - {fileID: 11400000, guid: d364f19c002a0cd4bb1bb702dcd3289b, type: 2}
+  - {fileID: 11400000, guid: 5726615e0f61eac429cbffd2dd41b33f, type: 2}
+  startingBuildingBase: {fileID: 0}
   buildingPrefab: {fileID: 0}
   buildingRange: 0
   buildingDamage: 0
   buildingFireRate: 0
   buildingBulletSpeed: 0
+  buildingIncome: 0
   buildingCost: 0
+  buildingXP: 0
 --- !u!1001 &2343762061913265322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194,6 +200,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CastleTower
       objectReference: {fileID: 0}
+    - target: {fileID: 5982047147588310523, guid: acd1f04b3d55655458889c1c7b3f8777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6745406526843349639, guid: acd1f04b3d55655458889c1c7b3f8777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6330569696750049147, guid: acd1f04b3d55655458889c1c7b3f8777, type: 3}
     m_RemovedGameObjects: []
@@ -223,6 +237,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5950384567592784246}
     m_Modifications:
+    - target: {fileID: 1178102951970378158, guid: 98fa73ab467f0fd4690f05a28e11f424, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3234014613959393580, guid: 98fa73ab467f0fd4690f05a28e11f424, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -233,6 +251,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3234014613959393580, guid: 98fa73ab467f0fd4690f05a28e11f424, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949269623274858746, guid: 98fa73ab467f0fd4690f05a28e11f424, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4951359012948822809, guid: 98fa73ab467f0fd4690f05a28e11f424, type: 3}

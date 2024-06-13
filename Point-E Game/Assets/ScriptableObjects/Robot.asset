@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Robot
   m_EditorClassIdentifier: 
   prefab: {fileID: 8260635967014836686, guid: fc69b7bab70b22d4b86e9325552e2420, type: 3}
-  enemyHealth: 50
+  enemyHealth: 100
   enemyDamage: 10
   enemySpeed: 10
