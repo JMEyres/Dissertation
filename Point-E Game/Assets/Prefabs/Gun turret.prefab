@@ -141,6 +141,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7aacd8392185cb6419c3488f72d031a4, type: 2}
   startingBuildingBase: {fileID: 0}
   buildingPrefab: {fileID: 0}
+  buildingMaterial: {fileID: 0}
   buildingRange: 0
   buildingDamage: 0
   buildingFireRate: 0
@@ -273,13 +274,30 @@ PrefabInstance:
     - {fileID: 159852228052447332, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1094064596246081244, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8271198349809727362}
   m_SourcePrefab: {fileID: 100100000, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
 --- !u!1 &388466568514012260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1094064596246081244, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
   m_PrefabInstance: {fileID: 741679679000324792}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8271198349809727362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388466568514012260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49af4c19e5126894c82000bf55f96830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingStats: {fileID: 0}
+  meshRenderer: {fileID: 0}
 --- !u!1 &2265815581439301693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1529872544286159493, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}

@@ -141,6 +141,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 68d14c04bd38dda4fb07b4b0f5b59b4a, type: 2}
   startingBuildingBase: {fileID: 0}
   buildingPrefab: {fileID: 0}
+  buildingMaterial: {fileID: 0}
   buildingRange: 0
   buildingDamage: 0
   buildingFireRate: 0
@@ -219,7 +220,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8193781737035430525, guid: 61cde6a676ff2994fbec38977106693c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1707222364081804606}
   m_SourcePrefab: {fileID: 100100000, guid: 61cde6a676ff2994fbec38977106693c, type: 3}
 --- !u!4 &1205563991608738566 stripped
 Transform:
@@ -236,6 +240,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8193781737035430525, guid: 61cde6a676ff2994fbec38977106693c, type: 3}
   m_PrefabInstance: {fileID: 3657604480147138631}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1707222364081804606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860583524636840506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49af4c19e5126894c82000bf55f96830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingStats: {fileID: 0}
+  meshRenderer: {fileID: 0}
 --- !u!4 &4956517836041529847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8506030118067012016, guid: 61cde6a676ff2994fbec38977106693c, type: 3}

@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class AISpawner : MonoBehaviour
 {
+    [SerializeField] private List<Wave> waves;
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject waveBTN;
 
     private float robotTimer = 0;
     private float alienTimer = 0;
@@ -20,7 +22,6 @@ public class AISpawner : MonoBehaviour
     private int alienCount;
     private int wolfCount;
     
-    [SerializeField] private List<Wave> waves;
     void Start()
     {
         robotTimer = 0;
@@ -34,19 +35,15 @@ public class AISpawner : MonoBehaviour
         if (alienCount != 0) alienTimer += Time.deltaTime;
         if (wolfCount != 0) wolfTimer += Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Return) && enemyCount == 0 && waveCounter <= waves.Count)
-        {
-            waveOngoing = true;
-            initWave(waveCounter);
-        }
-
         if (waveOngoing)
         {
+            waveBTN.SetActive(false);
             spawnWave(waveCounter);
         }
 
         if (waveFinished)
         {
+            waveBTN.SetActive(true);
             waveOngoing = false;
             waveCounter++;
             waveFinished = false;
@@ -71,7 +68,6 @@ public class AISpawner : MonoBehaviour
         robotCount = waves[wave].robotCount;
         alienCount = waves[wave].alienCount;
         wolfCount = waves[wave].wolfCount;
-        
     }
 
     private void spawnWave(int _wave)
@@ -107,6 +103,18 @@ public class AISpawner : MonoBehaviour
             }
         }
         
-        if(enemyCount == 0) waveFinished = true;
+        if(enemyCount == 0)
+        {
+            waveFinished = true;
+        }
+    }
+
+    public void spawnWaveBTN()
+    {
+        if (enemyCount == 0 && waveCounter <= waves.Count)
+        {
+            waveOngoing = true;
+            initWave(waveCounter);
+        }
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3954809675349861264}
   - component: {fileID: 8312396630472750422}
   - component: {fileID: 7155694332935377103}
+  - component: {fileID: 5511463098638493099}
   m_Layer: 0
   m_Name: Money Printer
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5511463098638493099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7481930550818367475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49af4c19e5126894c82000bf55f96830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingStats: {fileID: 0}
+  meshRenderer: {fileID: 0}
 --- !u!1 &8626560091794185064
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +169,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e621626fdb3525846940cfbbce76c827, type: 2}
   startingBuildingBase: {fileID: 0}
   buildingPrefab: {fileID: 0}
+  buildingMaterial: {fileID: 0}
   buildingRange: 0
   buildingDamage: 0
   buildingFireRate: 0

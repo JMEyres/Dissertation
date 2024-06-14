@@ -7,6 +7,7 @@ using UnityEngine;
 public class BuildingBase : ScriptableObject
 {
     public GameObject buildingPrefab;
+    public Material buildingMaterial;
     public float buildingRange;
     public float buildingDamage;
     public float buildingFireRate;

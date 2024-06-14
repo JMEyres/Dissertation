@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Turret.cs" />
      <Compile Include="Assets\Scripts\RadialMenu.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\Scripts\LevelupMaterial.cs" />
      <Compile Include="Assets\Scripts\PCVisualizer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Dynamic Grass FX\Demo\Scripts\Move.cs" />
@@ -74,9 +75,9 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
      <Compile Include="Assets\Scripts\EnemyStats.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
@@ -188,6 +189,7 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <Folder Include="Assets\Materials\TurretLVLS" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
@@ -896,12 +898,6 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Postprocessing.Runtime">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
@@ -910,6 +906,12 @@
      </Reference>
      <Reference Include="Unity.Burst">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -959,11 +961,11 @@
      <Reference Include="Unity.AI.Navigation.Updater">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Postprocessing.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -974,11 +976,11 @@
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation.Editor">
-     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor">
+     <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\joshu\Github\Dissertation\Point-E Game\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>

@@ -9,6 +9,7 @@ public class BuildingStats : MonoBehaviour
     public BuildingBase startingBuildingBase;
     
     public GameObject buildingPrefab;
+    public Material buildingMaterial;
     public float buildingRange;
     public float buildingDamage;
     public float buildingFireRate;
@@ -25,6 +26,7 @@ public class BuildingStats : MonoBehaviour
         {
             startingBuildingBase = buildingBase[0];
             buildingPrefab = startingBuildingBase.buildingPrefab;
+            buildingMaterial = startingBuildingBase.buildingMaterial;
             buildingRange = startingBuildingBase.buildingRange;
             buildingDamage = startingBuildingBase.buildingDamage;
             buildingFireRate = startingBuildingBase.buildingFireRate;
@@ -45,6 +47,7 @@ public class BuildingStats : MonoBehaviour
         if(buildingBase != null)
         {
             buildingRange = buildingBase[buildingLevel].buildingRange;
+            buildingMaterial = buildingBase[buildingLevel].buildingMaterial;
             buildingDamage = buildingBase[buildingLevel].buildingDamage;
             buildingFireRate = buildingBase[buildingLevel].buildingFireRate;
             buildingBulletSpeed = buildingBase[buildingLevel].buildingBulletSpeed;

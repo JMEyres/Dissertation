@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: RailgunTurret
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 1224286696618107796, guid: 18d95e8fe3ba3804db85818d8f2f82d3, type: 3}
+  buildingMaterial: {fileID: 2100000, guid: 543683d3bd755554fa50231ea714206f, type: 2}
   buildingRange: 20
   buildingDamage: 50
   buildingFireRate: 0.2
   buildingBulletSpeed: 100
+  buildingIncome: 0
   buildingCost: 50
