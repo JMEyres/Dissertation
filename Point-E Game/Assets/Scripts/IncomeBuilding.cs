@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class IncomeBuilding : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem coinBurst;
+    [SerializeField] private AudioSource coinSound;
     private BuildingStats buildingStats;
     private float incomeCountdown = 0f;
 
@@ -13,6 +15,7 @@ public class IncomeBuilding : MonoBehaviour
     private void Awake()
     {
         if(buildingStats == null) buildingStats = GetComponent<BuildingStats>();
+        if(coinSound == null) coinSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,6 +35,8 @@ public class IncomeBuilding : MonoBehaviour
     private void GenerateIncome()
     {
         PlayerStats.money += buildingStats.buildingIncome;
+        coinBurst.Play();
+        coinSound.Play();
         buildingStats.buildingXP++;
     }
 }

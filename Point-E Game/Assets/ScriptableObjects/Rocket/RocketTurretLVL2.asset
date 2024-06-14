@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RocketTurretLVL2
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
+  buildingMaterial: {fileID: 2100000, guid: e7ed3fd4f4b21bc45abb70481264803f, type: 2}
   buildingRange: 35
   buildingDamage: 100
   buildingFireRate: 0.2

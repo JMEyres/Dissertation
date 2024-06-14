@@ -18,6 +18,8 @@ public class Turret : MonoBehaviour
     public Transform shootPoint;
 
     public bool enable = false;
+
+    public AudioSource shotSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class Turret : MonoBehaviour
     private void Awake()
     {
         if(buildingStats == null) buildingStats = GetComponent<BuildingStats>();
+        if(shotSound == null) shotSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -78,6 +81,7 @@ public class Turret : MonoBehaviour
     void Shoot()
     {
         GameObject bulletGO = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+        shotSound.Play();
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         bullet.parent = gameObject;
         bullet.damage = buildingStats.buildingDamage;

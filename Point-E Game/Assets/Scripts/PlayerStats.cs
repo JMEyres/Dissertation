@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private Slider healthBar;
     [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private TextMeshProUGUI killsText;
     public static float health = 100f;
     public static int money = 100;
 
@@ -26,6 +27,7 @@ public class PlayerStats : MonoBehaviour
         healthBar.GetComponentInChildren<TextMeshProUGUI>().text = health + " / 100";
 
         moneyText.text = "Money: " + money;
+        killsText.text = "Total Kills: " + totalKills;
 
         if (health == 0)
             SceneManager.LoadScene("EndScene");

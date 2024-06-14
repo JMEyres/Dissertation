@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] public List<GameObject> waypoints;
     [SerializeField] private EnemyStats enemyStats;
     [SerializeField] private GameObject target;
+    [SerializeField] private AudioSource hitSound;
     private int targetIndex;
 
     private NavMeshAgent navAgent;
@@ -17,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         waypointParent = GameObject.Find("WaypointParent");
+        if (hitSound == null) hitSound = GetComponent<AudioSource>();
         
         for (int i = 0; i < waypointParent.transform.childCount; i++)
         {
@@ -47,6 +49,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Base")
         {
+            hitSound.Play();
             PlayerStats.health-= enemyStats.enemyDamage;
             Destroy(gameObject);
         }

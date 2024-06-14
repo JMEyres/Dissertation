@@ -8,6 +8,7 @@ public class AISpawner : MonoBehaviour
     [SerializeField] private List<Wave> waves;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject waveBTN;
+    [SerializeField] private AudioSource clickSound;
 
     private float robotTimer = 0;
     private float alienTimer = 0;
@@ -24,6 +25,8 @@ public class AISpawner : MonoBehaviour
     
     void Start()
     {
+        if (clickSound == null) clickSound = GetComponent<AudioSource>();
+        
         robotTimer = 0;
         alienTimer = 0;
         wolfTimer = 0;
@@ -111,10 +114,16 @@ public class AISpawner : MonoBehaviour
 
     public void spawnWaveBTN()
     {
+        clickSound.Play();
         if (enemyCount == 0 && waveCounter <= waves.Count)
         {
             waveOngoing = true;
             initWave(waveCounter);
+        }
+        else if (enemyCount == 0 && waveCounter > waves.Count)
+        {
+            waveOngoing = true;
+            initWave(waves.Count);
         }
     }
 }

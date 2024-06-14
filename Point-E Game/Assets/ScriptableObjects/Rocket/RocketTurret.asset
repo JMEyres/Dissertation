@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08da89a7efcfb54a8ccb4d48a2b4e7b, type: 3}
   m_Name: RocketTurret
   m_EditorClassIdentifier: 
-  buildingPrefab: {fileID: 0}
+  buildingPrefab: {fileID: 9022625343023446850, guid: 3fd3fa0c9e4274e4c920a8410615c926, type: 3}
+  buildingMaterial: {fileID: 2100000, guid: 543683d3bd755554fa50231ea714206f, type: 2}
   buildingRange: 30
   buildingDamage: 100
   buildingFireRate: 0.1
   buildingBulletSpeed: 15
+  buildingIncome: 0
   buildingCost: 100

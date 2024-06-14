@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GatlingTurretLVL3
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
+  buildingMaterial: {fileID: 2100000, guid: c628c1384ed284a4b981fd0829dc06ac, type: 2}
   buildingRange: 15
   buildingDamage: 20
   buildingFireRate: 3.5
