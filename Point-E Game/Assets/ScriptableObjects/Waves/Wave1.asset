@@ -16,17 +16,17 @@ MonoBehaviour:
   robotHealth: 100
   robotDamage: 20
   robotSpeed: 5
-  robotReward: 30
+  robotReward: 3
   robotSpawnInterval: 5
   alienCount: 5
   alienHealth: 50
   alienDamage: 10
   alienSpeed: 10
-  alienReward: 20
+  alienReward: 2
   alienSpawnInterval: 3
   wolfCount: 10
   wolfHealth: 20
   wolfDamage: 5
   wolfSpeed: 15
-  wolfReward: 10
+  wolfReward: 1
   wolfSpawnInterval: 2

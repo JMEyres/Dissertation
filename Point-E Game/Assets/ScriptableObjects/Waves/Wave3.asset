@@ -12,15 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc08d1fdc9a5dc4b9b86ad0ed066616, type: 3}
   m_Name: Wave3
   m_EditorClassIdentifier: 
-  robotCount: 0
-  robotHealth: 0
-  robotDamage: 0
-  robotSpeed: 0
-  alienCount: 0
-  alienHealth: 0
-  alienDamage: 0
-  alienSpeed: 0
-  goblinCount: 0
-  goblinHealth: 0
-  goblinDamage: 0
-  goblinSpeed: 0
+  robotCount: 20
+  robotHealth: 100
+  robotDamage: 20
+  robotSpeed: 5
+  robotReward: 3
+  robotSpawnInterval: 2
+  alienCount: 20
+  alienHealth: 60
+  alienDamage: 10
+  alienSpeed: 10
+  alienReward: 2
+  alienSpawnInterval: 1
+  wolfCount: 30
+  wolfHealth: 20
+  wolfDamage: 5
+  wolfSpeed: 15
+  wolfReward: 1
+  wolfSpawnInterval: 1

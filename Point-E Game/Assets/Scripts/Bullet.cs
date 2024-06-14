@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour
     {
         if (target == null)
         {
+            Destroy(gameObject);
             return;
         }
 
@@ -32,7 +33,7 @@ public class Bullet : MonoBehaviour
             HitTarget();
             return;
         }
-
+        
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 

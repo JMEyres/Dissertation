@@ -45,6 +45,8 @@ public class RadialMenu : MonoBehaviour
     private Image segmentImage;
     private int selectedSegment;
 
+    private bool toggle = false;
+
     void Awake()
     {
         parent.SetActive(false);
@@ -135,11 +137,13 @@ public class RadialMenu : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                parent.SetActive(true);
+                toggle = !toggle;
+                parent.SetActive(toggle);
             }
 
             if (parent.activeSelf && Input.GetMouseButtonDown(0))
             {
+                toggle = false;
                 Grid.SelectBuilding(buildables[selectedSegment].gameObject.name);
                 parent.SetActive(false);
             }

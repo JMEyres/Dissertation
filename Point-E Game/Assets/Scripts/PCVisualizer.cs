@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using System.Text.RegularExpressions;
 using UnityEditor;
 
 public class PCVisualizer : MonoBehaviour
@@ -15,7 +16,8 @@ public class PCVisualizer : MonoBehaviour
     
     void Awake()
     {
-        coords = CreateCoordsList(AssetDatabase.GetAssetPath(pointCloud));
+        coords = CreateCoordsList();
+        
         SetPoints(coords);
     }
 
@@ -41,22 +43,23 @@ public class PCVisualizer : MonoBehaviour
         pointsUpdated = true;
     }
 
-    List<Vector3> CreateCoordsList(string _path)
+    List<Vector3> CreateCoordsList()
     {
         List<Vector3> coordsList = new List<Vector3>();
-        String[] itemStrings = File.ReadAllLines(_path);
-        for (int i = 0; i < itemStrings.Length; i++)
+
+        string fs = pointCloud.text;
+        string[] itemStrings = Regex.Split(fs, "\n");
+        for (int i = 0; i < itemStrings.Length-1; i++) 
         {
-            String tempString;
+            string tempString;
             tempString = itemStrings[i].Replace("[","");
             tempString = tempString.Replace("]","");
             itemStrings[i] = tempString;
         }
 
-        for (int i = 0; i < itemStrings.Length; i++)
+        for (int i = 0; i < itemStrings.Length-1; i++)
         {
             string[] temp = itemStrings[i].Split(" ", StringSplitOptions.RemoveEmptyEntries);
-
             float x = float.Parse(temp[0]);
             float y = float.Parse(temp[1]);
             float z = float.Parse(temp[2]);

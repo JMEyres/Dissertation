@@ -20,7 +20,7 @@ print('loading SDF model...')
 model.load_state_dict(load_checkpoint(name, device))
 
 # Load a point cloud we want to convert into a mesh.
-prompt = ("Dollar")
+prompt = ("Bullet")
 pc = PointCloud.load("Pointclouds/"+prompt)
 
 # Plot the point cloud as a sanity check.

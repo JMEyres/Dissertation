@@ -13,10 +13,6 @@ public class Grid : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private Vector2 gridCellSize; // Should be equal to placeable size - i.e. 1x1 cube
 
-    [Header("Colors")] 
-    [SerializeField] private Color placeable;
-    [SerializeField] private Color unPlaceable;
-
     [Header("Placeables")] 
     [SerializeField] private string selectedBuilding;
     

@@ -16,14 +16,17 @@ MonoBehaviour:
   robotHealth: 50
   robotDamage: 20
   robotSpeed: 5
+  robotReward: 3
   robotSpawnInterval: 2.5
   alienCount: 0
   alienHealth: 0
   alienDamage: 0
   alienSpeed: 0
+  alienReward: 0
   alienSpawnInterval: 0
-  goblinCount: 0
-  goblinHealth: 0
-  goblinDamage: 0
-  goblinSpeed: 0
-  goblinSpawnInterval: 0
+  wolfCount: 0
+  wolfHealth: 0
+  wolfDamage: 0
+  wolfSpeed: 0
+  wolfReward: 0
+  wolfSpawnInterval: 0

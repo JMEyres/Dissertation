@@ -10,10 +10,12 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private Slider healthBar;
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private TextMeshProUGUI killsText;
+    [SerializeField] private TextMeshProUGUI waveText;
     public static float health = 100f;
     public static int money = 100;
 
     public static int totalKills = 0;
+    public static int waveCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class PlayerStats : MonoBehaviour
 
         moneyText.text = "Money: " + money;
         killsText.text = "Total Kills: " + totalKills;
+        waveText.text = "Wave: " + waveCount;
 
         if (health == 0)
             SceneManager.LoadScene("EndScene");

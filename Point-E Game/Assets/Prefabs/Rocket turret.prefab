@@ -73,6 +73,8 @@ MonoBehaviour:
   pointClouds:
   - {fileID: 1855271867059025271}
   - {fileID: 3482965697154002026}
+  placeable: {r: 0.27058825, g: 0.8980392, b: 1, a: 0.69411767}
+  unPlaceable: {r: 0.9764706, g: 0, b: 0.043137256, a: 0.69411767}
   meshs:
   - {fileID: 1668514109549611531}
   - {fileID: 4860583524636840506}
@@ -314,6 +316,26 @@ PrefabInstance:
     - target: {fileID: 3114405454888050145, guid: 61cde6a676ff2994fbec38977106693c, type: 3}
       propertyPath: m_Name
       value: Quadlauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986649958992415716, guid: 61cde6a676ff2994fbec38977106693c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986649958992415716, guid: 61cde6a676ff2994fbec38977106693c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986649958992415716, guid: 61cde6a676ff2994fbec38977106693c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986649958992415716, guid: 61cde6a676ff2994fbec38977106693c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986649958992415716, guid: 61cde6a676ff2994fbec38977106693c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

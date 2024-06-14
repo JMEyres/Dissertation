@@ -7,6 +7,9 @@ public class BuildingPlaceable : MonoBehaviour
 {
     public bool IsPlaceable { get; private set; } = true;
     public List<GameObject> pointClouds;
+    public Color placeable;
+    public Color unPlaceable;
+    
     public List<GameObject> meshs;
     [Header("Required")] 
     public BuildingStats buildingStats;
@@ -18,11 +21,19 @@ public class BuildingPlaceable : MonoBehaviour
 
     void OnTriggerStay(Collider _other)
     {
+        foreach (var pc in pointClouds)
+        {
+            pc.GetComponent<ParticleSystemRenderer>().material.color = unPlaceable;
+        }
         IsPlaceable = false;
     }
 
     void OnTriggerExit(Collider _other)
     {
+        foreach (var pc in pointClouds)
+        {
+            pc.GetComponent<ParticleSystemRenderer>().material.color = placeable;
+        }
         IsPlaceable = true;
     }
 }

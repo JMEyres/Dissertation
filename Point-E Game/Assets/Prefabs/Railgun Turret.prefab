@@ -54,7 +54,7 @@ MonoBehaviour:
   enemyTag: Enemy
   pivot: {fileID: 6484661078237018060}
   rotationSpeed: 10
-  bulletPrefab: {fileID: 6606403656024903767, guid: 00bad39ae377a1441a90b14ff8ff749a, type: 3}
+  bulletPrefab: {fileID: 8865407457935600653, guid: e034fca3c065f034a9679d03baffdfcd, type: 3}
   shootPoint: {fileID: 3723156318996062136}
   enable: 0
   shotSound: {fileID: 0}
@@ -73,6 +73,8 @@ MonoBehaviour:
   pointClouds:
   - {fileID: 9014737859327426093}
   - {fileID: 7047166500132289224}
+  placeable: {r: 0.27058825, g: 0.8980392, b: 1, a: 0.69411767}
+  unPlaceable: {r: 0.9764706, g: 0, b: 0.043137256, a: 0.69411767}
   meshs:
   - {fileID: 8323275546549240145}
   - {fileID: 3835572082244027292}

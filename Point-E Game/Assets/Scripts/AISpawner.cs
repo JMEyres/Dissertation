@@ -17,6 +17,7 @@ public class AISpawner : MonoBehaviour
     private bool waveOngoing = false;
     private bool waveFinished = false;
     private int waveCounter = 0;
+    private int waveToSpawn = 0;
 
     private int enemyCount;
     private int robotCount;
@@ -41,7 +42,7 @@ public class AISpawner : MonoBehaviour
         if (waveOngoing)
         {
             waveBTN.SetActive(false);
-            spawnWave(waveCounter);
+            spawnWave(waveToSpawn);
         }
 
         if (waveFinished)
@@ -52,6 +53,7 @@ public class AISpawner : MonoBehaviour
             waveFinished = false;
         }
 
+        
     }
 
     private void spawnEnemy(GameObject _enemy, int _enemyType, float _enemyDamage, float _enemyHealth, float _enemySpeed, int _enemyReward)
@@ -115,15 +117,18 @@ public class AISpawner : MonoBehaviour
     public void spawnWaveBTN()
     {
         clickSound.Play();
-        if (enemyCount == 0 && waveCounter <= waves.Count)
+        PlayerStats.waveCount++;
+        if (enemyCount == 0 && waveCounter < waves.Count)
         {
+            waveToSpawn = waveCounter;
             waveOngoing = true;
-            initWave(waveCounter);
+            initWave(waveToSpawn);
         }
-        else if (enemyCount == 0 && waveCounter > waves.Count)
+        else if (enemyCount == 0 && waveCounter >= waves.Count)
         {
+            waveToSpawn = waves.Count - 1;
             waveOngoing = true;
-            initWave(waves.Count);
+            initWave(waveToSpawn);
         }
     }
 }
