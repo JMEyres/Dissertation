@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
-    [Header("Grid Settings")] 
-    [SerializeField] private float gridLerpTime;
-    [SerializeField] private float gridOpacity;
-
     [Header("Required References")]
     [SerializeField] private Camera cam;
     [SerializeField] private Vector2 gridCellSize; // Should be equal to placeable size - i.e. 1x1 cube
@@ -21,10 +17,7 @@ public class Grid : MonoBehaviour
     float placeableObjectRotation = 0;
     
     private bool buildingSelected; 
-    private bool buildingPlaceable; 
-    
-    float gridLerpTimer;
-    float lerpDirection;
+    private bool buildingPlaceable;
 
     // Singleton
     static Grid instance;

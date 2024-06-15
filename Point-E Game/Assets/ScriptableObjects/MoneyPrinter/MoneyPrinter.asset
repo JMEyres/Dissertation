@@ -19,4 +19,4 @@ MonoBehaviour:
   buildingFireRate: 0.1
   buildingBulletSpeed: 0
   buildingIncome: 1
-  buildingCost: 0
+  buildingCost: 25
