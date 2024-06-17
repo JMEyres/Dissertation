@@ -117,6 +117,7 @@ public class AISpawner : MonoBehaviour
     public void spawnWaveBTN()
     {
         clickSound.Play();
+        PlayerStats.currentWave++;
         if (enemyCount == 0 && PlayerStats.waveCount < waves.Count)
         {
             waveToSpawn = PlayerStats.waveCount;
