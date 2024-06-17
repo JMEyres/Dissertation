@@ -20,6 +20,12 @@ public class EndScreen : MonoBehaviour
     public void RestartGame()
     {
         clickSound.Play();
+        PlayerStats.health = 100;
+        PlayerStats.money = 100;
+        PlayerStats.totalKills = 0;
+        PlayerStats.waveCount = 0;
+        PlayerStats.currentWave = 0;
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 

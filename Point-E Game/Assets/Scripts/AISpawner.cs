@@ -49,7 +49,7 @@ public class AISpawner : MonoBehaviour
         {
             waveBTN.SetActive(true);
             waveOngoing = false;
-            waveCounter++;
+            PlayerStats.waveCount++;
             waveFinished = false;
         }
 
@@ -117,14 +117,13 @@ public class AISpawner : MonoBehaviour
     public void spawnWaveBTN()
     {
         clickSound.Play();
-        PlayerStats.waveCount++;
-        if (enemyCount == 0 && waveCounter < waves.Count)
+        if (enemyCount == 0 && PlayerStats.waveCount < waves.Count)
         {
-            waveToSpawn = waveCounter;
+            waveToSpawn = PlayerStats.waveCount;
             waveOngoing = true;
             initWave(waveToSpawn);
         }
-        else if (enemyCount == 0 && waveCounter >= waves.Count)
+        else if (enemyCount == 0 && PlayerStats.waveCount >= waves.Count)
         {
             waveToSpawn = waves.Count - 1;
             waveOngoing = true;

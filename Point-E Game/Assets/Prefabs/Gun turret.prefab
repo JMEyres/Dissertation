@@ -270,12 +270,24 @@ PrefabInstance:
       value: GunTurret
       objectReference: {fileID: 0}
     - target: {fileID: 3759392733148298869, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759392733148298869, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759392733148298869, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759392733148298869, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.253
       objectReference: {fileID: 0}
     - target: {fileID: 3759392733148298869, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.25
+      value: 0.258
       objectReference: {fileID: 0}
     - target: {fileID: 3759392733148298869, guid: 5f7bc8ab6f69fee4ab790752d01a0d40, type: 3}
       propertyPath: m_LocalRotation.w

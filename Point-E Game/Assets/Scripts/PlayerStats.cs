@@ -16,12 +16,9 @@ public class PlayerStats : MonoBehaviour
 
     public static int totalKills = 0;
     public static int waveCount = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public static int currentWave = 0;
+    
+    
     // Update is called once per frame
     void Update()
     {
@@ -30,9 +27,9 @@ public class PlayerStats : MonoBehaviour
 
         moneyText.text = "Money: " + money;
         killsText.text = "Total Kills: " + totalKills;
-        waveText.text = "Wave: " + waveCount;
+        waveText.text = "Wave: " + currentWave;
 
-        if (health == 0)
+        if (health <= 0)
             SceneManager.LoadScene("EndScene");
     }
 }

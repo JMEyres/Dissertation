@@ -64,8 +64,8 @@ public class RadialMenu : MonoBehaviour
         maskRect.sizeDelta = new Vector2(maskRadius * 2, maskRadius * 2); 
         BGRect.sizeDelta = new Vector2(backgroundRadius * 2, backgroundRadius * 2);
 
-       segmentRef.GetComponent<RectTransform>().sizeDelta = new Vector2(backgroundRadius * 2, backgroundRadius * 2);
-       segmentImage.fillAmount = 1.0f/numOfSegments;
+        segmentRef.GetComponent<RectTransform>().sizeDelta = new Vector2(backgroundRadius * 2, backgroundRadius * 2);
+        segmentImage.fillAmount = 1.0f/numOfSegments;
         
         float angleSize = 360.0f / numOfSegments;
 
